@@ -8,6 +8,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=JetBrains+Mono:wght@300;400;600&family=Rajdhani:wght@300;400;600;700&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <style>
     *,
     *::before,
@@ -1201,6 +1202,86 @@
       color: var(--cyan)
     }
 
+    /* CONVEYOR BELT & SKILLS UPDATE */
+    .scard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+    .scard-header .sicon {
+      margin-bottom: 0;
+    }
+    .scopy-icon {
+      color: var(--dim);
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .scopy-icon:hover {
+      color: var(--cyan);
+    }
+    .stech-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 2px;
+      color: var(--dim);
+      margin-top: 1.5rem;
+      text-transform: uppercase;
+    }
+    .stech-tags {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--green);
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+    }
+    .conveyor-wrap {
+      margin-top: 6rem;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+    }
+    .conveyor-wrap::before, .conveyor-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 15%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .conveyor-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, #050508, transparent);
+    }
+    .conveyor-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, #050508, transparent);
+    }
+    .conveyor-track {
+      display: flex;
+      width: max-content;
+      animation: conveyor 25s linear infinite;
+    }
+    .conveyor-item {
+      font-size: 4.5rem;
+      margin: 0 4rem;
+      color: var(--dim);
+      transition: transform 0.3s, filter 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(100%) opacity(0.7);
+    }
+    .conveyor-item:hover {
+      transform: scale(1.15);
+      filter: grayscale(0%) opacity(1);
+    }
+    @keyframes conveyor {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
     /* TIMELINE (Experience & Education) */
     .timeline {
       position: relative;
@@ -1389,7 +1470,7 @@
           <div class="stats">
             <div class="chip"><span class="cnum" data-n="10">0</span><span class="clbl">Projects Done</span></div>
             <div class="chip"><span class="cnum" data-n="5">0</span><span class="clbl">Happy Clients</span></div>
-            <div class="chip"><span class="cnum" data-n="3">0</span><span class="clbl">Years Coding</span></div>
+            <div class="chip"><span class="cnum" data-n="1.5">0</span><span class="clbl">Years Coding</span></div>
           </div>
         </div>
       </div>
@@ -1402,54 +1483,94 @@
       <div class="slabel rv">Skills &amp; Expertise</div>
       <h2 class="stitle rv" style="transition-delay:.1s">Technical <span class="a">Arsenal</span></h2>
       <div class="skill-grid">
-        <div class="scard rv" style="--p:95%;transition-delay:.1s"><span class="sicon">🌐</span>
+        <div class="scard rv" style="transition-delay:.1s">
+          <div class="scard-header">
+            <span class="sicon">🌐</span>
+            <svg class="scopy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
           <h3>Web Development</h3>
-          <p>React, HTML, CSS, JavaScript and Tailwind CSS — responsive, performant websites with modern best practices.
-          </p>
-          <div class="bwrap">
-
-          </div>
-          <div class="spct"></div>
+          <div class="stech-title">TECH TAGS</div>
+          <div class="stech-tags">HTML CSS JS React Tailwind</div>
+          <p>Responsive, performant websites with modern best practices.</p>
         </div>
-        <div class="scard rv" style="--p:90%;transition-delay:.2s"><span class="sicon">🤖</span>
+        <div class="scard rv" style="transition-delay:.2s">
+          <div class="scard-header">
+            <span class="sicon">🤖</span>
+            <svg class="scopy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
           <h3>AI &amp; Machine Learning</h3>
-          <p>Python-based AI workflows, ML models, and integrating intelligent features into real-world applications.
-          </p>
-          <div class="bwrap">
-
-          </div>
-          <div class="spct"></div>
+          <div class="stech-title">TECH TAGS</div>
+          <div class="stech-tags">Python TensorFlow PyTorch</div>
+          <p>Python-based AI workflows and intelligent real-world features.</p>
         </div>
-        <div class="scard rv" style="--p:88%;transition-delay:.3s"><span class="sicon">📱</span>
+        <div class="scard rv" style="transition-delay:.3s">
+          <div class="scard-header">
+            <span class="sicon">📱</span>
+            <svg class="scopy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
           <h3>Mobile Development</h3>
-          <p>Cross-platform mobile applications with smooth performance and elegant user-friendly interfaces.</p>
-          <div class="bwrap">
-          </div>
-          <div class="spct"></div>
+          <div class="stech-title">TECH TAGS</div>
+          <div class="stech-tags">React Native Flutter Swift</div>
+          <p>Cross-platform mobile apps with smooth visual performance.</p>
         </div>
-        <div class="scard rv" style="--p:92%;transition-delay:.4s"><span class="sicon">🎨</span>
+        <div class="scard rv" style="transition-delay:.4s">
+          <div class="scard-header">
+            <span class="sicon">🎨</span>
+            <svg class="scopy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
           <h3>UI/UX &amp; Brand Identity</h3>
-          <p>Cohesive visual identities and intuitive interfaces designed in Figma with strong UX principles.</p>
-          <div class="bwrap">
-
-          </div>
-          <div class="spct"></div>
+          <div class="stech-title">TECH TAGS</div>
+          <div class="stech-tags">Figma AdobeXD Sketch</div>
+          <p>Cohesive visual identities with strong core UX principles.</p>
         </div>
-        <div class="scard rv" style="--p:87%;transition-delay:.5s"><span class="sicon">⚡</span>
+        <div class="scard rv" style="transition-delay:.5s">
+          <div class="scard-header">
+            <span class="sicon">⚡</span>
+            <svg class="scopy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          </div>
           <h3>Backend &amp; Databases</h3>
-          <p>Node.js, Express, MongoDB, SQL — scalable secure APIs and complex data architecture.</p>
-          <div class="bwrap">
-
-          </div>
-          <div class="spct"></div>
+          <div class="stech-title">TECH TAGS</div>
+          <div class="stech-tags">Node.js Express MongoDB SQL</div>
+          <p>Scalable secure APIs and complex backend data architecture.</p>
         </div>
-        <div class="scard rv" style="--p:85%;transition-delay:.6s"><span class="sicon">🔧</span>
-          <h3>DevOps &amp; Version Control</h3>
-          <p>Git &amp; GitHub for version control, collaborative workflows and project management.</p>
-          <div class="bwrap">
-
+        <div class="scard rv" style="transition-delay:.6s">
+          <div class="scard-header">
+            <span class="sicon">🔧</span>
+            <svg class="scopy-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
           </div>
-          <div class="spct"></div>
+          <h3>DevOps &amp; Tools</h3>
+          <div class="stech-title">TECH TAGS</div>
+          <div class="stech-tags">Git GitHub Docker AWS</div>
+          <p>Version control, robust workflows and system management.</p>
+        </div>
+      </div>
+
+      <!-- CONVEYOR BELT -->
+      <div class="conveyor-wrap rv" style="transition-delay:.7s">
+        <div class="conveyor-track">
+          <!-- First set -->
+          <div class="conveyor-item"><i class="devicon-react-original colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-nodejs-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-python-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-docker-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-mongodb-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-git-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-html5-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-css3-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-javascript-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-tailwindcss-original colored"></i></div>
+          
+          <!-- Duplicated set for infinite effect -->
+          <div class="conveyor-item"><i class="devicon-react-original colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-nodejs-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-python-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-docker-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-mongodb-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-git-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-html5-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-css3-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-javascript-plain colored"></i></div>
+          <div class="conveyor-item"><i class="devicon-tailwindcss-original colored"></i></div>
         </div>
       </div>
     </div>
