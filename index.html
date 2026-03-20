@@ -1437,7 +1437,7 @@
       <div class="about-grid">
         <div class="rvl">
           <div class="img-wrap">
-            <img src="ABHILASH2.JPG" alt="Jamalla Abhilash" class="about-photo"
+            <img src="ABHILASH2.jpg" alt="Jamalla Abhilash" class="about-photo"
               onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
             <div class="no-photo" style="display:none">JA</div>
           </div>
@@ -1483,37 +1483,44 @@
       <div class="slabel rv">Skills &amp; Expertise</div>
       <h2 class="stitle rv" style="transition-delay:.1s">Technical <span class="a">Arsenal</span></h2>
       <div class="futuristic-ui-container rv" style="transition-delay:.2s">
-        <!-- LEFT ARC: Python, AI, ML, Node, Docker -->
-        <!-- Shape: ) -->
+        <!-- LEFT ARC: AI/ML, Databases, Backend -->
         <div class="arc-container left-arc-container">
           <div class="arc left-arc">
-            <!-- Positioned using polar coordinates conceptualization (Right side of specific circle) -->
-            <!-- Angle distribution from -60 to 60 deg relative to horizontal right center -->
-            <div class="skill-node node-1" data-label="Python">
-              <i class="devicon-python-plain colored"></i>
-              <span class="s-label">Python</span>
+            
+            <!-- Node 1: AI & ML -->
+            <div class="skill-node node-1 large-node" data-label="AI & ML">
+              <div class="sn-icon"><i class="devicon-python-plain colored"></i></div>
+              <div class="sn-title">AI & ML</div>
+              <div class="sn-tags">
+                <i class="devicon-tensorflow-original"></i>
+                <span style="font-size:1rem">🤖</span>
+              </div>
             </div>
-            <div class="skill-node node-2" data-label="AI">
-              <!-- Using Robot emoji fallback or custom icon class if available, effectively sticking with emoji for generic AI -->
-              <span class="s-icon">🤖</span>
-              <span class="s-label">AI</span>
+
+            <!-- Node 2: Databases -->
+            <div class="skill-node node-2 large-node" data-label="Databases">
+              <div class="sn-icon"><i class="devicon-mongodb-plain colored"></i></div>
+              <div class="sn-title">Databases</div>
+              <div class="sn-tags">
+                <i class="devicon-mysql-plain"></i>
+                <i class="devicon-postgresql-plain"></i>
+              </div>
             </div>
-            <div class="skill-node node-3" data-label="ML">
-              <i class="devicon-tensorflow-original colored"></i>
-              <span class="s-label">ML</span>
+
+            <!-- Node 3: Backend -->
+            <div class="skill-node node-3 large-node" data-label="Backend">
+              <div class="sn-icon"><i class="devicon-nodejs-plain colored"></i></div>
+              <div class="sn-title">Backend</div>
+              <div class="sn-tags">
+                <i class="devicon-express-original"></i>
+                <i class="devicon-java-plain"></i>
+              </div>
             </div>
-            <div class="skill-node node-4" data-label="Node.js">
-              <i class="devicon-nodejs-plain colored"></i>
-              <span class="s-label">Node</span>
-            </div>
-            <div class="skill-node node-5" data-label="Docker">
-              <i class="devicon-docker-plain colored"></i>
-              <span class="s-label">Docker</span>
-            </div>
+
           </div>
         </div>
   
-        <!-- CENTER CONSOLE -->
+        <!-- CENTER CONSOLE (Reverted) -->
         <div class="center-console">
           <div class="console-glow"></div>
           <div class="code-block">
@@ -1525,30 +1532,40 @@
           </div>
         </div>
   
-        <!-- RIGHT ARC: HTML, CSS, JS, React, Tailwind -->
-        <!-- Shape: ( -->
+        <!-- RIGHT ARC: Frontend, DSA, DevOps -->
         <div class="arc-container right-arc-container">
           <div class="arc right-arc">
-             <div class="skill-node node-1" data-label="HTML">
-               <i class="devicon-html5-plain colored"></i>
-               <span class="s-label">HTML</span>
+             
+             <!-- Node 1: Frontend -->
+             <div class="skill-node node-1 large-node" data-label="Frontend">
+               <div class="sn-icon"><i class="devicon-react-original colored"></i></div>
+               <div class="sn-title">Frontend</div>
+               <div class="sn-tags">
+                 <i class="devicon-html5-plain"></i>
+                 <i class="devicon-tailwindcss-original"></i>
+               </div>
              </div>
-             <div class="skill-node node-2" data-label="CSS">
-               <i class="devicon-css3-plain colored"></i>
-               <span class="s-label">CSS</span>
+
+             <!-- Node 2: DSA -->
+             <div class="skill-node node-2 large-node" data-label="DSA">
+               <div class="sn-icon"><i class="devicon-cplusplus-plain colored"></i></div>
+               <div class="sn-title">DSA</div>
+               <div class="sn-tags">
+                 <i class="devicon-c-plain"></i>
+                 <span>Algo</span>
+               </div>
              </div>
-             <div class="skill-node node-3" data-label="JavaScript">
-               <i class="devicon-javascript-plain colored"></i>
-               <span class="s-label">JS</span>
+
+             <!-- Node 3: DevOps -->
+             <div class="skill-node node-3 large-node" data-label="DevOps">
+               <div class="sn-icon"><i class="devicon-docker-plain colored"></i></div>
+               <div class="sn-title">DevOps</div>
+               <div class="sn-tags">
+                 <i class="devicon-git-plain"></i>
+                 <i class="devicon-amazonwebservices-plain-wordmark"></i>
+               </div>
              </div>
-             <div class="skill-node node-4" data-label="React">
-               <i class="devicon-react-original colored"></i>
-               <span class="s-label">React</span>
-             </div>
-             <div class="skill-node node-5" data-label="Tailwind">
-               <i class="devicon-tailwindcss-original colored"></i>
-               <span class="s-label">Tailwind</span>
-             </div>
+
           </div>
         </div>
       </div>
@@ -1641,72 +1658,109 @@
   box-shadow: -20px 0 60px rgba(0, 212, 255, 0.15), inset 20px 0 40px rgba(0,212,255,0.05);
 }
 
-/* Skill Nodes */
+/* Skill Nodes - Large Detailed Circles */
 .skill-node {
   position: absolute;
-  width: 85px; /* Larger Nodes */
-  height: 85px;
-  background: rgba(15, 18, 32, 0.95);
-  border: 1px solid rgba(0, 212, 255, 0.4);
+  width: 140px;
+  height: 140px;
+  background: rgba(10, 14, 23, 0.95);
+  border: 1px solid rgba(0, 212, 255, 0.3);
   border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--cyan);
-  font-size: 2.8rem; /* Larger Icons */
-  box-shadow: 0 0 25px rgba(0, 212, 255, 0.15);
-  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
-  z-index: 10;
+  z-index: 20;
+  backdrop-filter: blur(8px);
+  overflow: hidden;
 }
-
-.skill-node .s-label {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  margin-top: 5px;
-  color: #fff;
-  opacity: 0.8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.skill-node i { display: block; line-height: 1; }
 
 .skill-node:hover {
-  transform: scale(1.3);
-  background: rgba(0, 212, 255, 0.2);
+  transform: scale(1.15) !important;
   border-color: var(--cyan);
-  box-shadow: 0 0 50px var(--cyan);
-  z-index: 20;
+  box-shadow: 0 0 50px rgba(0, 212, 255, 0.4), inset 0 0 20px rgba(0, 212, 255, 0.1);
+  z-index: 30;
+  background: radial-gradient(circle at center, rgba(0, 40, 60, 0.95), rgba(10, 14, 23, 0.98));
 }
 
-.skill-node:hover .s-label {
+/* Inner Layout */
+.sn-icon {
+  font-size: 3rem;
+  margin-bottom: 6px;
+  transition: transform 0.4s ease;
+}
+
+.skill-node:hover .sn-icon {
+  transform: translateY(-4px) scale(1.1);
+}
+
+.sn-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
   color: var(--cyan);
-  opacity: 1;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
 }
 
-/* Positioning Nodes - Large Arcs with Inward Curve */
+.sn-tags {
+  display: flex;
+  gap: 8px;
+  opacity: 0.7;
+}
 
-/* Left Arc: Base on Right Edge */
-.left-arc .skill-node { right: -42px; /* Half width (approx) */ }
+.sn-tags i {
+  font-size: 1.2rem; /* Small sub-icons */
+  color: #fff;
+  transition: color 0.3s;
+}
 
-.left-arc .node-1 { top: 12%; right: 90px; }
-.left-arc .node-2 { top: 29%; right: 10px; }
-.left-arc .node-3 { top: 50%; right: -42px; transform: translateY(-50%); } 
-.left-arc .node-3:hover { transform: translateY(-50%) scale(1.3); }
-.left-arc .node-4 { bottom: 29%; right: 10px; }
-.left-arc .node-5 { bottom: 12%; right: 90px; }
+.skill-node:hover .sn-tags i {
+  color: var(--green);
+}
 
-/* Right Arc: Base on Left Edge */
-.right-arc .skill-node { left: -42px; /* Half width (approx) */ }
+/* Positioning Nodes - 3 per arc */
 
-.right-arc .node-1 { top: 12%; left: 90px; }
-.right-arc .node-2 { top: 29%; left: 10px; }
-.right-arc .node-3 { top: 50%; left: -42px; transform: translateY(-50%); }
-.right-arc .node-3:hover { transform: translateY(-50%) scale(1.3); }
-.right-arc .node-4 { bottom: 29%; left: 10px; }
-.right-arc .node-5 { bottom: 12%; left: 90px; }
+/* Left Arc (D-shape - Curve on Right) */
+.left-arc .node-1 { 
+  top: 10%; 
+  right: 80px; 
+}
+.left-arc .node-2 { 
+  top: 50%; 
+  right: -30px; 
+  transform: translateY(-50%);
+}
+.left-arc .node-3 { 
+  bottom: 10%; 
+  right: 80px; 
+}
+
+/* Right Arc (C-shape - Curve on Left) */
+.right-arc .node-1 { 
+  top: 10%; 
+  left: 80px; 
+}
+.right-arc .node-2 { 
+  top: 50%; 
+  left: -30px; 
+  transform: translateY(-50%);
+}
+.right-arc .node-3 { 
+  bottom: 10%; 
+  left: 80px; 
+}
+
+/* Special Hover for Middle Nodes to keep centering */
+.left-arc .node-2:hover,
+.right-arc .node-2:hover {
+  transform: translateY(-50%) scale(1.15) !important;
+}
+
 
 
 /* Center Console */
